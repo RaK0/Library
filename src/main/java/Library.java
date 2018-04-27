@@ -71,11 +71,16 @@ public class Library extends JFrame implements ActionListener {
         } catch (Exception e) {
             System.out.println(e);
         }
+        finally {
+            entityManager.close();
+            entityManagerFactory.close();
+        }
         if (results == null) {
             return null;
         } else {
             return results;
         }
+
     }
     public static String rentToString(Boolean a ){
         if (a)return "Tak";

@@ -37,8 +37,10 @@ public class DB_Users {
     private long howMuchRent;
     private Date createDate = new Date();
     private Date modifyDate;
+
     @OneToMany(mappedBy = "user")
     private List<DB_Books> books;
+
     public long getId() {
         return id;
     }

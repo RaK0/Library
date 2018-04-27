@@ -19,6 +19,7 @@ public class DB_Books {
     private int avaiable;
     @Enumerated(EnumType.STRING)
     private State state;
+
     @ManyToOne
     private DB_Users user;
 
